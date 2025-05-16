@@ -45,3 +45,28 @@ This code is used to verify the results of our paper:
 ├── .gitignore  
 
 └── README.md  
+
+### Key Components
+
+- ### **ultralytics-main/**:
+Contains the official implementation of YOLOv8, used for real-time object detection and classification.  
+- ### **XGBoost.py**
+Code for training an XGBoost classifier based on the collected tactile sensor data.  
+- ### **XGBoost_test.py**
+Applies and evaluates the trained tactile classification model on new data.  
+- ### **Multimodality.py**
+Performs Bayesian fusion based on confusion-matrix-informed probabilities to combine predictions from vision and tactile sources.
+- ### **cap_read.py**, **class_ch341.py**, **class_finger.py**, **class_sensorcmd.py**, **sensorPara.py**
+A suite of scripts for sensor initialization, communication, and real-time data collection.    
+- ### **cloud_PCA_cluster.py**
+Executes low-curvature clustering and PCA-based planar surface fitting on filtered point cloud data.  
+- ### **cloud_check.py**
+Provides a visualization tool to inspect the processed point cloud.  
+- ### **cloud_filter.py**
+Applies voxel-based and connected-domain filtering to reduce noise and background clutter in point cloud.  
+- ### **ground_delete.py**
+Removes the ground plane from the scene to isolate object geometry.  
+- ### **cloud_move_arm.py**
+Contains calibration parameters and functions to move the UR5 robotic arm to the selected surface for stable contact.  
+- ### **train.py**
+Training script for the YOLOv8 visual recognition model.  
