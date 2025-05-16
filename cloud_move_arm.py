@@ -2,6 +2,18 @@ import math
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 
+def get_joint_angles(rtde_receive):
+    """
+    Get the current joint angles of the UR5 robotic arm.
+    Parameters:
+        rtde_receive: An instance of RTDEReceiveInterface
+    Returns:
+        list: A list containing the six joint angles in radians [q0, q1, q2, q3, q4, q5]
+    """
+    joint_angles = rtde_receive.getActualQ()
+    return joint_angles
+
+
 # 1. Get current TCP pose
 
 def get_tcp_pose(rtde_receive):
